@@ -1,0 +1,252 @@
+/* Apply box sizing to all elements */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* General page design */
+body {
+  margin: 0;
+  background-color: #f4f7fb;
+  color: #243047;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfe6ef;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  color: #315c9b;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 22px;
+  color: #45526a;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #315c9b;
+}
+
+/* Main content */
+main {
+  width: 84%;
+  max-width: 950px;
+  margin: 45px auto;
+}
+
+/* Profile section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  min-height: 350px;
+  padding: 50px;
+  color: #ffffff;
+  background-color: #315c9b;
+  border-radius: 20px;
+}
+
+/* Profile photograph */
+.profile-photo {
+  width: 210px;
+  height: 210px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background-color: #ffffff;
+  border: 5px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+}
+
+.hero-text {
+  width: 100%;
+}
+
+/* Headings */
+h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 0;
+  color: #315c9b;
+  font-size: 25px;
+}
+
+h3 {
+  margin-bottom: 5px;
+  color: #34435e;
+  font-size: 17px;
+}
+
+.intro {
+  max-width: 550px;
+  margin-bottom: 28px;
+  font-size: 18px;
+}
+
+/* Contact button */
+.button {
+  display: inline-block;
+  padding: 11px 22px;
+  color: #315c9b;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #eaf0f8;
+}
+
+/* Content cards */
+.card {
+  margin-top: 25px;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #dfe6ef;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(39, 56, 82, 0.06);
+}
+
+/* Education or experience details */
+.detail-row {
+  padding-left: 18px;
+  border-left: 4px solid #7ba6d8;
+}
+
+/* Skills and interests */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  min-width: 120px;
+  padding: 9px 16px;
+  color: #254d83;
+  background-color: #eaf2fb;
+  border: 1px solid #cddff2;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.interest-list li {
+  color: #665027;
+  background-color: #fff5dd;
+  border-color: #f3dfad;
+}
+
+/* Contact section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-grid div {
+  padding: 16px;
+  background-color: #f6f8fb;
+  border-radius: 9px;
+}
+
+/* Footer */
+footer {
+  padding: 22px;
+  color: #68758b;
+  text-align: center;
+}
+
+/* Display hints while fields are empty */
+.empty-field:empty::before {
+  color: #93a0b4;
+  content: attr(data-placeholder);
+  font-weight: normal;
+}
+
+.hero .empty-field:empty::before {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.large-field {
+  min-height: 60px;
+}
+
+.small-field {
+  font-size: 14px;
+}
+
+.footer-name {
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* Responsive design for phones and tablets */
+@media (max-width: 720px) {
+  .top-bar {
+    display: block;
+    padding: 16px 6%;
+    text-align: center;
+    position: static;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 4px 7px;
+  }
+
+  main {
+    width: 90%;
+    margin-top: 25px;
+  }
+
+  .hero {
+    display: block;
+    padding: 35px 25px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 25px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
